@@ -61,6 +61,22 @@ Append the dictionary with the image URL string and the hemisphere title to a li
 
 ## Mongo DB & Flask Application
 
+Use MongoDB with Flask templating to create a new HTML page that displays all the information that was scraped from the URLs above.
+
+
+Start by converting your Jupyter notebook into a Python script called scrape_mars.py by using a function called scrape. This function should  execute all your scraping code from above and return one Python dictionary containing all the scraped data.
+
+
+Next, create a route called /scrape that will import your scrape_mars.py script and call your scrape function.
+
+Store the return value in Mongo as a Python dictionary.
+
+
+
+Create a root route / that will query your Mongo database and pass the Mars data into an HTML template for displaying the data.
+
+
+Create a template HTML file called index.html that will take the Mars data dictionary and display all the data in the appropriate HTML elements. Use the following as a guide for what the final product should look like, but feel free to create your own design.
 
 
 ###
