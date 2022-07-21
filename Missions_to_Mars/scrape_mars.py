@@ -87,7 +87,7 @@ def scrape_web():
                     'img_url': img_url
                 }
 
-                mars_image_url.append(mars_image_dict)
+                Mars_image_url.append(mars_image_dict)
         except Exception as e:
             print(e)
 

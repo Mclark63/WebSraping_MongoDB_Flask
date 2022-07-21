@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mission to Mars</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+<body>
+    <!-- Header and Scrape button -->
+    <div class="container-fluid">
+      <div class="jumbotron text-center", >
+        <h1>Mission to Mars</h1>
+        <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+      </div>
+    </div>
+      <!-- Latest News and featured image -->
+    <div class="container-fluid">
+      <div class="col-md-12">
+        <div class = "row">
+          <div col-md-12>
+            <h2 class = text-left> Latest Mars News </h2> 
+            
+              <h6>{{Mars.Latest_news_Date}}</h6>
+              <h4><strong>{{Mars.Latest_news_Title}}</strong></h4>
+              <h5>{{Mars.Latest_news_Paragraph}}</h5>
+        
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="content-single">
+              <h2 class="pic-title"> Featured Mars Image</h2>
+              <img src="{{Mars.Featured_image_url}}" width="720" height="650" alt="Mars">
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="sidebar">
+            <h2> Mars Facts </h2>
+              <table class="table table-stripped">
+                <tbody>{{Mars.Mars_facts_html_table|safe}}</tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>  
+    </div>
+
+    <!--display the hemispheres' images and titles-->
+    <div class="container-fluid">
+      <div class="col-lg-12">
+        <h2 class="text-center">Mars Hemispheres</h2>
+        <div class="row">
+            <div class="col-sm-3">
+              <div class="thumbnail">
+                <img src={{Mars.Hemisphere_images[0].img_url}} alt="..." class="img-thumbnail">
+              </div>
+              <div class="caption">
+                <h4>{{Mars.Hemisphere_images[0].Title}}</h4>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="thumbnail">
+                <img src={{Mars.Hemisphere_images[1].img_url}} alt="..." class="img-thumbnail">
+              </div>
+              <div class="caption">
+                <h4>{{Mars.Hemisphere_images[1].Title}}</h4>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="thumbnail">
+                <img src={{Mars.Hemisphere_images[2].img_url}} alt="..." class="img-thumbnail">
+              </div>
+              <div class="caption">
+                <h4>{{Mars.Hemisphere_images[2].Title}}</h4>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="thumbnail">
+                <img src={{Mars.Hemisphere_images[3].img_url}} alt="..." class="img-thumbnail">
+              </div>
+              <div class="caption">
+                <h4>{{Mars.Hemisphere_images[3].Title}}</h4>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+          
+   
+  </body>
+  
+</html>
+</html>
